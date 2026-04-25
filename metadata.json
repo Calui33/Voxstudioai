@@ -1,0 +1,6 @@
+{
+  "name": "VoxStudio AI",
+  "description": "Plataforma de dublagem cinematográfica inteligente com síntese de voz original em tempo real.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["Dublagem AI", "Vozes Originais", "Multilíngue"]
+}

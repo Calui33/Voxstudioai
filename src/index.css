@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --color-studio-bg: #050505;
+  --color-studio-card: rgba(255, 255, 255, 0.03);
+  --color-studio-sidebar: #0a0a0a;
+  --color-studio-accent: #8b5cf6;
+  --color-studio-accent-dim: rgba(139, 92, 246, 0.2);
+  --color-studio-success: #10b981;
+  --color-studio-border: rgba(255, 255, 255, 0.08);
+  --font-sans: 'Helvetica Neue', Arial, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-studio-bg text-gray-200 font-sans selection:bg-studio-accent/30;
+    background-image: radial-gradient(circle at top right, #1e1b4b, #050505);
+  }
+}
+
+.glass-panel {
+  @apply bg-studio-card backdrop-blur-md border border-studio-border rounded-2xl transition-all duration-300;
+}
+
+.accent-glow {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.15);
+}
+
+.active-ring {
+  @apply border-studio-accent/50;
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
+}
+
+.studio-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+.recording-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .4; }
+}
